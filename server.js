@@ -42,7 +42,7 @@ class cola {
   }
 
   getWaterBoiled() {
-    return "cola`s water is boiled";
+    return "cola`s all water is boiled";
   }
 }
 
