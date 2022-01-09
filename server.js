@@ -52,4 +52,5 @@ class fanta extends cola {
   }
 }
 
-const fanta = new fanta("ob", "havo");
+const fantacha = new fanta("ob", "havo");
+console.log(fantacha.getWaterBoiled());
