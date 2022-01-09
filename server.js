@@ -34,23 +34,29 @@ Har bir "Object" class yordamida tuziladi!
 // console.log(joinedWords.getSplit());
 
 //! inheritance
+// ota(parent) classdagi metodlarni bola(child) class da chaqirib ishlatish qobilyati.
 
-class cola {
-  constructor(str1, str2) {
-    this.str1 = str1;
-    this.str2 = str2;
-  }
+// class cola {
+//   constructor(str1, str2) {
+//     this.str1 = str1;
+//     this.str2 = str2;
+//   }
 
-  getWaterBoiled() {
-    return "cola`s all water is boiled";
-  }
-}
+//   getWaterBoiled() {
+//     return "cola`s all water is boiled";
+//   }
+// }
 
-class fanta extends cola {
-  constructor(str1, str2) {
-    super(str1, str2);
-  }
-}
+// class fanta extends cola {
+//   constructor(str1, str2) {
+//     super(str1, str2);
+//   }
+// }
 
-const fantacha = new fanta("ob", "havo");
-console.log(fantacha.getWaterBoiled());
+// const fantacha = new fanta("ob", "havo");
+// console.log(fantacha.getWaterBoiled());
+
+//! Encapsulation
+/* 
+"Encapsulation" bu ma`lumotni butunligi va xafsizligini ta`minlab turish uchun 1 ishni Set(setter) bajarib natijani Get(getter) matodlari orqali chiqarish uchun. Setterda bajarilgan maxfiy ishni getter orqali shunchaki natijasini chiqarib berish 
+*/
