@@ -23,12 +23,12 @@ class concatWords {
   }
 
   getSplit() {
-    return this.str1.split("") + " " + this.str2;
+    return (this.str1 + this.str2).split("");
   }
 }
 
 // console.log(new concatWords("Salom", "Abduhalim").getConcat()); //! class chaqirishni 1-yo`li
 
 //! class chqirishni 2- yo`li
-const joinedWords = new concatWords("abcdefghijklmnopqrstuvwxyz", "alifbo!");
+const joinedWords = new concatWords("abcdefghijkl", "mnopqrstuvwxyz");
 console.log(joinedWords.getSplit());
