@@ -88,22 +88,63 @@ Har bir "Object" class yordamida tuziladi!
 JavaScript does not support overloading. JavaScript supports overriding, so if you define two functions with the same name, the last one defined will override the previously defined version and every time a call will be made to the function, the last defined one will get executed
 */
 
-class calc {
-  constructor(num1, num2) {
-    this.num1 = num1;
-    this.num2 = num2;
+//!-------------------------------- CALCULATOR ------------------------------------------------------------------
+
+// class calc {
+//   constructor(num1, num2) {
+//     this.num1 = num1;
+//     this.num2 = num2;
+//   }
+
+//   setAddition() {
+//     return this.num1 + this.num2;
+//   }
+
+//   getAddition() {
+//     return this.setAddition();
+//   }
+// }
+
+// const calculator = new calc(2, 8);
+// console.log(
+//   `${calculator.num1} + ${calculator.num2} = ${calculator.getAddition()}`
+// );
+
+//!----------------------------------------- TODOS ----------------------------------------------------------------
+
+class Todos {
+  constructor(title, owner) {
+    this.title = title;
+    this.owner = owner;
+    this.todos = [];
   }
 
-  setAddition() {
-    return this.num1 + this.num2;
+  getTodos() {
+    return this.todos;
   }
 
-  getAddition() {
-    return this.setAddition();
+  newTodo(title, name) {
+    this.todos.push({
+      id: this.todos.length + 1,
+      name: name,
+      title: title,
+    });
+    return this.todos;
+  }
+
+  updateTodo(idNumber, title) {
+    const foundTodo = this.todos.find((e) => e.id == idNumber);
+    foundTodo.title = title;
+    return this.todos;
+  }
+
+  deleteTodo(idNumber) {
+    return (this.todos = this.todos.filter((e) => e.id !== idNumber));
   }
 }
 
-const calculator = new calc(2, 8);
-console.log(
-  `${calculator.num1} + ${calculator.num2} = ${calculator.getAddition()}`
-);
+const todo = new Todos("mashq qilish", "Abduhalim");
+console.log(todo.newTodo("yugurish", "shoxrux"));
+console.log(todo.newTodo("ovqat yeyish", "sardor"));
+console.log(todo.updateTodo(2, "kulish"));
+console.log(todo.deleteTodo(2));
