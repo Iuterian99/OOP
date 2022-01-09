@@ -112,39 +112,64 @@ JavaScript does not support overloading. JavaScript supports overriding, so if y
 
 //!----------------------------------------- TODOS ----------------------------------------------------------------
 
-class Todos {
-  constructor(title, owner) {
-    this.title = title;
-    this.owner = owner;
-    this.todos = [];
+// class Todos {
+//   constructor(title, owner) {
+//     this.title = title;
+//     this.owner = owner;
+//     this.todos = [];
+//   }
+
+//   getTodos() {
+//     return this.todos;
+//   }
+
+//   newTodo(title, name) {
+//     this.todos.push({
+//       id: this.todos.length + 1,
+//       name: name,
+//       title: title,
+//     });
+//     return this.todos;
+//   }
+
+//   updateTodo(idNumber, title) {
+//     const foundTodo = this.todos.find((e) => e.id == idNumber);
+//     foundTodo.title = title;
+//     return this.todos;
+//   }
+
+//   deleteTodo(idNumber) {
+//     return (this.todos = this.todos.filter((e) => e.id !== idNumber));
+//   }
+// }
+
+// const todo = new Todos("mashq qilish", "Abduhalim");
+// console.log(todo.newTodo("yugurish", "shoxrux"));
+// console.log(todo.newTodo("ovqat yeyish", "sardor"));
+// console.log(todo.updateTodo(2, "kulish"));
+// console.log(todo.deleteTodo(2));
+
+class WaterBoiler {
+  #hotSpiral; //!---> private qilib qo`yilgan klient to`g`ridan to`gri bu o`zgaruvchini olomidi!
+
+  constructor(temp) {
+    this.temp = temp;
   }
 
-  getTodos() {
-    return this.todos;
+  get water() {
+    return this.#hotSpiral;
   }
 
-  newTodo(title, name) {
-    this.todos.push({
-      id: this.todos.length + 1,
-      name: name,
-      title: title,
-    });
-    return this.todos;
+  set water(x) {
+    this.#hotSpiral = x;
   }
 
-  updateTodo(idNumber, title) {
-    const foundTodo = this.todos.find((e) => e.id == idNumber);
-    foundTodo.title = title;
-    return this.todos;
-  }
-
-  deleteTodo(idNumber) {
-    return (this.todos = this.todos.filter((e) => e.id !== idNumber));
+  static Bottle() {
+    return "put bottle into waterboiler!";
   }
 }
 
-const todo = new Todos("mashq qilish", "Abduhalim");
-console.log(todo.newTodo("yugurish", "shoxrux"));
-console.log(todo.newTodo("ovqat yeyish", "sardor"));
-console.log(todo.updateTodo(2, "kulish"));
-console.log(todo.deleteTodo(2));
+const waterBoiler = new WaterBoiler("suv");
+console.log((waterBoiler.Bottle = "qo`ykalla"));
+
+console.log((waterBoiler.water = "juja"));
