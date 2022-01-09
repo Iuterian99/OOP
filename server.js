@@ -58,5 +58,26 @@ Har bir "Object" class yordamida tuziladi!
 
 //! Encapsulation
 /* 
-"Encapsulation" bu ma`lumotni butunligi va xafsizligini ta`minlab turish uchun 1 ishni Set(setter) bajarib natijani Get(getter) matodlari orqali chiqarish uchun. Setterda bajarilgan maxfiy ishni getter orqali shunchaki natijasini chiqarib berish 
+"Encapsulation" bu ma`lumotni butunligi va xafsizligini ta`minlab turish uchun nitta ishni klientga ko`rsatmasdan amalga oshirish ya`ni 1 ishni Set(setter) bajarib natijani Get(getter) matodlari orqali chiqarish uchun. Setterda bajarilgan maxfiy ishni getter orqali shunchaki natijasini chiqarib berish 
 */
+
+class cola {
+  constructor(str1, str2) {
+    this.str1 = str1;
+    this.str2 = str2;
+  }
+
+  setWaterBoiled() {
+    return "it is info of 'set' method but you are receiving it from 'get' method using 'Encapsulation'";
+  }
+
+  getWaterBoiled() {
+    return this.setWaterBoiled();
+  }
+}
+
+const colacha = new cola("suv", "range");
+console.log(colacha.getWaterBoiled());
+
+//! Abstraction
+// Encapsulationga o`xshaydi lekin biron bir qiyin bo`lgan vazifani yoki processni klientga ko`rsatmay qilish
